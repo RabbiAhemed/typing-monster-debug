@@ -122,7 +122,7 @@ const start = () => {
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
-      startTime = new Date().getTime();
+      startTime = parseInt(new Date().getTime());
     }
     count--;
   }, 1000);
@@ -137,7 +137,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
   document.getElementById("show-time").innerHTML = `${
     startTime ? timeSpent : 0
