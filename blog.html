@@ -47,20 +47,30 @@
     </p>
     <!-- Second Question Ends -->
     <!-- Third Question Starts -->
-    <h2>Q3. How does Javascript Event loop works?</h2>
+    <h2>Q3. Different reason / ways we can get undefined in JavaScript</h2>
+
+    <p><b>1.</b> Not assigning value or not initializing a variable</p>
     <p>
-      The event loop is a mechanism that allows JavaScript to perform
-      non-blocking operations. When an asynchronous task is started, the event
-      loop will start running. Once the task is completed, the event loop will
-      again check for any other tasks that need to be performed. The Event Loop
-      has one simple job — to monitor the Call Stack and the Callback Queue. If
-      the Call Stack is empty, the Event Loop will take the first event from the
-      queue and will push it to the Call Stack, which effectively runs it. Such
-      an iteration is called a tick in the Event Loop. The event loop executes
-      tasks from the event queue only when the call stack is empty. The event
-      loop allows us to use callbacks and promises.
+      <b>2.</b> Not returning anything from a function or function with no
+      return
     </p>
-    <p></p>
+    <p>
+      <b>3.</b> Not giving / missing / passing a parameter value for a function
+      while calling
+    </p>
+    <p>
+      <b>4.</b> If return has nothing in the right side.Not specifying or
+      telling what to return.
+    </p>
+    <p>
+      <b>5.</b> Finding or accessing a property that does not exist in an object
+      will give undefined
+    </p>
+    <p><b>6.</b> Finding or accessing array elements that is out of range</p>
+    <p><b>7.</b> Deleting an element of an array</p>
+    <p><b>8.</b> Setting a value directly to undefined will give undefined</p>
+    <p>There are many more probable ways to get undefined in javascript</p>
+
     <!-- Third Question Ends -->
   </body>
 </html>
