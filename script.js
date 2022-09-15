@@ -48,13 +48,13 @@ const typeController = (e) => {
     }</span>`;
   } else {
     errorCount++;
+
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
   }
 
   // check if given question text is equal to user typed text
-
   if (questionText === userText) {
     gameOver();
   }
@@ -78,7 +78,6 @@ const gameOver = () => {
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
-
   modalBackground.classList.toggle("hidden");
   // clear user text
   display.innerHTML = "";
@@ -117,15 +116,14 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
-      clearInterval(startCountdown);
-
+    if (count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
-      startTime = parseInt(new Date().getTime());
+      clearInterval(startCountdown);
+      startTime = new Date().getTime();
     }
     count--;
   }, 1000);
